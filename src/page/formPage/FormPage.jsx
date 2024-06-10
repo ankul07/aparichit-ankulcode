@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./form.css";
 import { useNavigate } from "react-router-dom";
+import { ColorRing } from "react-loader-spinner";
 import axios from "axios";
 const FormPage = () => {
   const [step, setStep] = useState(1);
+  const [loading, setLoading] = useState(false); // Add loading state
   const [formData, setFormData] = useState({
     crime: "",
     criminalname: "",
@@ -22,6 +24,7 @@ const FormPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
       const response = await axios.post(
@@ -38,6 +41,8 @@ const FormPage = () => {
       navigate("/end");
     } catch (error) {
       console.error("Error sending form data:", error);
+    } finally {
+      setLoading(false);
     }
   };
   useEffect(() => {
@@ -52,6 +57,19 @@ const FormPage = () => {
   }, []);
   return (
     <>
+      {loading && (
+        <div className="loader-container">
+          <ColorRing
+            visible={true}
+            height="80"
+            width="80"
+            ariaLabel="loading"
+            wrapperStyle={{}}
+            wrapperClass="loader"
+            colors={["#e15b64", "#f47e60", "#f8b26a", "#abbd81", "#849b87"]}
+          />
+        </div>
+      )}
       <section className="form-section">
         <div className="container">
           <form
@@ -124,6 +142,7 @@ const FormPage = () => {
                 <button
                   className="form-btn"
                   type="submit"
+                  disabled={loading}
                   onClick={handleSubmit}
                 >
                   Submit

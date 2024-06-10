@@ -3,8 +3,21 @@
   width: 100vw;
   overflow: hidden;
   background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .main-video video {
   width: 100%;
   height: 100%;
+}
+.main-video .loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
 }
