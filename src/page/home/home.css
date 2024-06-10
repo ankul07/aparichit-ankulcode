@@ -1,0 +1,71 @@
+.hero-section {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.hero-section .hero-image {
+  width: 100%;
+  height: 100%;
+}
+.hero-section .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.hero-section .container .hero-title {
+  font-weight: bold;
+  font-size: 40px;
+  color: #c40909;
+  line-height: 3.5rem;
+  word-spacing: 3px;
+  letter-spacing: 2;
+  border-color: #fbfbfb;
+  border-width: 3px;
+  text-shadow: 2px -2px 0 #fbfbfb, 2px -2px 0 #fbfbfb, -2px 2px 0 #fbfbfb,
+    2px 2px 0 #fbfbfb;
+}
+.hero-section .container .hero-btn {
+  background-color: #fff9f9;
+  opacity: 0.5;
+  font-size: 40px;
+  color: #f90707;
+  text-shadow: 2px -2px 0 #fbfbfb, 2px -2px 0 #fbfbfb, -2px 2px 0 #fbfbfb,
+    2px 2px 0 #fbfbfb;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  width: fit-content;
+  margin: auto;
+}
+.hero-section .container .hero-btn:hover {
+  color: #c40909;
+  background-color: #ffffff;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 550px) {
+  .hero-section .container .hero-title {
+    font-size: 25px;
+    line-height: 2rem;
+    width: 100%;
+  }
+  .hero-section .container {
+    top: 45%;
+  }
+}
+
+@media only screen and (max-width: 7500px) {
+  .hero-section .container .hero-title {
+    font-size: 25px;
+    line-height: 3rem;
+    width: 100%;
+  }
+  .hero-section .container {
+    top: 45%;
+  }
+}

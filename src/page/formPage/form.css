@@ -1,0 +1,83 @@
+.form-section {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://res.cloudinary.com/dkgfdtk2v/image/upload/v1717646762/question_ecii7c.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.form-section .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-section .container .form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+.form-section .container .form-box .input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 30%;
+  margin: auto;
+}
+.form-section .container .form-box .input-box label {
+  font-size: 64px;
+  color: #ffffff;
+  text-align: center;
+}
+.form-section .container .form-box .input-box input {
+  padding: 1rem 1rem;
+  font-size: 25px;
+  background-color: transparent;
+  color: #ffffff;
+}
+.form-section .container .form-box .input-box .form-btn {
+  width: 100px;
+  margin: auto;
+  font-size: 15px;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+.form-section .container .form-box .input-box .form-btn:hover {
+  background-color: #28262600;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  border: 1px solid #ffffff;
+}
+
+@media only screen and (max-width: 550px) {
+  .form-section .container .form-box .input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .form-section .container .form-box .input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .form-section .container .form-box .input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 80%;
+    margin: auto;
+  }
+}
