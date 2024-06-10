@@ -1,5 +1,7 @@
 import React from "react";
 import "./end.css";
+const mainvideo =
+  "https://res.cloudinary.com/dkgfdtk2v/video/upload/v1717646686/Video_2_ss3ymn.mp4";
 
 const End = () => {
   const handleVideoEnd = () => {
@@ -9,7 +11,7 @@ const End = () => {
     <>
       <div className="end-section">
         <video autoPlay onEnded={handleVideoEnd}>
-          <source src="./Video 2.mp4" type="video/mp4" />
+          <source src={mainvideo} type="video/mp4" />
         </video>
       </div>
     </>
